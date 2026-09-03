@@ -10,32 +10,49 @@
 /* Homepage Luxury Hero */
 .next-hero{position:relative;z-index:1;min-height:clamp(620px,78svh,840px);overflow:hidden;border-bottom:1px solid var(--line);background:var(--canvas)}
 
-/* Luxury Multi-Layer Ambient CSS Background */
+/* ── Multi-Layer Ambient Background System ── */
 .hero-ambient-wrap{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
-.hero-aurora-glow{position:absolute;border-radius:50%;filter:blur(95px);pointer-events:none;transform-origin:center center;will-change:transform,opacity}
-.hero-aurora-primary{top:-12%;left:50%;width:min(90vw,880px);height:540px;transform:translateX(-50%);background:radial-gradient(ellipse at center,var(--hero-glow-1),transparent 70%);animation:auroraDrift 14s ease-in-out infinite alternate}
-.hero-aurora-secondary{top:22%;left:12%;width:min(65vw,560px);height:460px;background:radial-gradient(circle at center,var(--hero-glow-2),transparent 68%);animation:auroraPulse 18s ease-in-out infinite alternate}
-.hero-aurora-accent{top:16%;right:10%;width:min(55vw,500px);height:400px;background:radial-gradient(circle at center,var(--hero-glow-3),transparent 65%);animation:auroraWarmth 16s ease-in-out infinite alternate-reverse}
 
-@keyframes auroraDrift{0%{transform:translateX(-50%) scale(1) translateY(0);opacity:.85}50%{transform:translateX(-52%) scale(1.08) translateY(24px);opacity:.98}100%{transform:translateX(-48%) scale(.95) translateY(-14px);opacity:.8}}
-@keyframes auroraPulse{0%{transform:scale(.95) translate(0,0);opacity:.7}100%{transform:scale(1.1) translate(28px,-18px);opacity:.95}}
-@keyframes auroraWarmth{0%{transform:scale(1) translate(0,0);opacity:.6}100%{transform:scale(1.15) translate(-24px,18px);opacity:.85}}
+/* Diagonal colour wash */
+.hero-wash-layer{position:absolute;inset:0;background:var(--hero-wash);opacity:1}
 
-/* Architectural Hairline Grid Pattern */
-.hero-grid-architectural{position:absolute;inset:0;background-image:linear-gradient(to right,var(--hero-grid-line) 1px,transparent 1px),linear-gradient(to bottom,var(--hero-grid-line) 1px,transparent 1px);background-size:80px 80px;background-position:center top;mask-image:radial-gradient(ellipse at 50% 38%,black 22%,rgba(0,0,0,.45) 58%,transparent 85%);-webkit-mask-image:radial-gradient(ellipse at 50% 38%,black 22%,rgba(0,0,0,.45) 58%,transparent 85%);opacity:.85}
+/* Aurora glow orbs */
+.hero-aurora-glow{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;transform-origin:center center;will-change:transform,opacity}
+.hero-aurora-primary{top:-18%;left:50%;width:min(95vw,960px);height:580px;transform:translateX(-50%);background:radial-gradient(ellipse at center,var(--hero-glow-1),transparent 68%);animation:auroraDrift 14s ease-in-out infinite alternate}
+.hero-aurora-secondary{top:28%;left:6%;width:min(60vw,520px);height:480px;background:radial-gradient(circle at center,var(--hero-glow-2),transparent 65%);animation:auroraPulse 18s ease-in-out infinite alternate}
+.hero-aurora-accent{top:10%;right:4%;width:min(58vw,520px);height:440px;background:radial-gradient(circle at center,var(--hero-glow-3),transparent 62%);animation:auroraWarmth 16s ease-in-out infinite alternate-reverse}
+.hero-aurora-fourth{bottom:-8%;left:50%;width:min(70vw,680px);height:380px;transform:translateX(-50%);background:radial-gradient(ellipse at center,var(--hero-glow-4),transparent 70%);animation:auroraBottom 20s ease-in-out infinite alternate}
 
-/* Concentric Ambient Rings */
-.hero-ambient-rings{position:absolute;top:22%;left:50%;transform:translate(-50%,-20%);width:min(95vw,1120px);height:min(95vw,1120px);border-radius:50%;border:1px solid var(--line);mask-image:radial-gradient(circle at center,transparent 35%,black 60%,transparent 74%);-webkit-mask-image:radial-gradient(circle at center,transparent 35%,black 60%,transparent 74%);opacity:.4;pointer-events:none}
-.hero-ambient-rings::before{position:absolute;inset:130px;border-radius:50%;border:1px dashed var(--line);content:"";opacity:.6}
+@keyframes auroraDrift{0%{transform:translateX(-50%) scale(1) translateY(0);opacity:.9}50%{transform:translateX(-53%) scale(1.1) translateY(28px);opacity:1}100%{transform:translateX(-47%) scale(.94) translateY(-16px);opacity:.85}}
+@keyframes auroraPulse{0%{transform:scale(.92) translate(0,0);opacity:.75}100%{transform:scale(1.14) translate(32px,-22px);opacity:1}}
+@keyframes auroraWarmth{0%{transform:scale(1) translate(0,0);opacity:.65}100%{transform:scale(1.18) translate(-28px,22px);opacity:.9}}
+@keyframes auroraBottom{0%{transform:translateX(-50%) scale(.96);opacity:.6}100%{transform:translateX(-48%) scale(1.12);opacity:.85}}
 
-/* Precision Coordinate Crosshairs */
-.hero-crosshair{position:absolute;font-family:var(--font-sans);font-size:13px;font-weight:300;color:var(--hero-crosshair);user-select:none;line-height:1}
+/* Dot-grid texture – subtle repeating dots */
+.hero-dot-grid{position:absolute;inset:0;background-image:radial-gradient(circle,var(--hero-dot-color) .6px,transparent .6px);background-size:24px 24px;background-position:12px 12px;mask-image:radial-gradient(ellipse 85% 75% at 50% 42%,black 20%,rgba(0,0,0,.5) 55%,transparent 82%);-webkit-mask-image:radial-gradient(ellipse 85% 75% at 50% 42%,black 20%,rgba(0,0,0,.5) 55%,transparent 82%);opacity:1}
+
+/* Architectural hairline grid */
+.hero-grid-architectural{position:absolute;inset:0;background-image:linear-gradient(to right,var(--hero-grid-line) 1px,transparent 1px),linear-gradient(to bottom,var(--hero-grid-line) 1px,transparent 1px);background-size:80px 80px;background-position:center top;mask-image:radial-gradient(ellipse 90% 80% at 50% 38%,black 18%,rgba(0,0,0,.5) 52%,transparent 80%);-webkit-mask-image:radial-gradient(ellipse 90% 80% at 50% 38%,black 18%,rgba(0,0,0,.5) 52%,transparent 80%);opacity:1}
+
+/* Concentric ambient rings */
+.hero-ambient-rings{position:absolute;top:22%;left:50%;transform:translate(-50%,-20%);width:min(95vw,1120px);height:min(95vw,1120px);border-radius:50%;border:1px solid var(--line);mask-image:radial-gradient(circle at center,transparent 30%,black 55%,transparent 72%);-webkit-mask-image:radial-gradient(circle at center,transparent 30%,black 55%,transparent 72%);opacity:.5;pointer-events:none}
+.hero-ambient-rings::before{position:absolute;inset:110px;border-radius:50%;border:1px dashed var(--line);content:"";opacity:.65}
+.hero-ambient-rings::after{position:absolute;inset:260px;border-radius:50%;border:1px solid var(--line);content:"";opacity:.35}
+
+/* Radial vignette overlay */
+.hero-vignette{position:absolute;inset:0;background:var(--hero-radial-vignette);pointer-events:none}
+
+/* Bottom gradient bleed into trust bar */
+.hero-bottom-fade{position:absolute;bottom:0;left:0;right:0;height:140px;background:linear-gradient(to top,var(--canvas),transparent);pointer-events:none}
+
+/* Precision coordinate crosshairs */
+.hero-crosshair{position:absolute;font-family:var(--font-sans);font-size:14px;font-weight:300;color:var(--hero-crosshair);user-select:none;line-height:1}
 .crosshair-top-left{top:110px;left:clamp(24px,6vw,90px)}
 .crosshair-top-right{top:110px;right:clamp(24px,6vw,90px)}
 .crosshair-mid-left{top:460px;left:clamp(24px,6vw,90px)}
 .crosshair-mid-right{top:460px;right:clamp(24px,6vw,90px)}
 
-/* Hero Typography & Layout */
+/* ── Hero Typography & Layout ── */
 .hero-centered{position:relative;z-index:2;display:flex;min-height:clamp(620px,78svh,840px);max-width:1180px;align-items:center;justify-content:center;padding-top:clamp(90px,11vh,115px);padding-bottom:clamp(55px,8vh,75px);text-align:center}
 .hero-copy{display:flex;width:100%;min-width:0;align-items:center;flex-direction:column}
 .hero-mega-title{width:100%;max-width:1080px;font-size:clamp(3.1rem,5.6vw,5.3rem);font-weight:600;line-height:1.06;letter-spacing:-.034em;text-wrap:balance}
