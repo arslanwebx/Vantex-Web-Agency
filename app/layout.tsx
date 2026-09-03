@@ -12,8 +12,8 @@ import "@/styles/pages.css";
 import "@/styles/responsive.css";
 import "@/styles/mobile-fixes.css";
 
-const instrument = Instrument_Sans({ subsets: ["latin"], variable: "--font-instrument", display: "swap" });
-const newsreader = Newsreader({ subsets: ["latin"], variable: "--font-newsreader", display: "swap" });
+const instrument = Instrument_Sans({ subsets: ["latin"], variable: "--font-instrument", display: "swap", weight: ["400", "500", "600", "700"] });
+const newsreader = Newsreader({ subsets: ["latin"], variable: "--font-newsreader", display: "swap", style: ["normal", "italic"], weight: ["400", "500", "600"] });
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   manifest: "/manifest.webmanifest",

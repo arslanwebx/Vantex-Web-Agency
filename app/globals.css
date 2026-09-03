@@ -6,60 +6,92 @@
 [data-theme="light"] {
   color-scheme: light;
   --canvas: #fbfcfb;
-  --canvas-deep: #f1f5f3;
+  --canvas-deep: #f2f6f4;
   --surface: #ffffff;
   --surface-2: #edf4f1;
   --text: #0d1716;
-  --text-secondary: #3e514e;
-  --text-muted: #5d716d;
+  --text-secondary: #3b4e4b;
+  --text-muted: #5f7470;
   --line: rgba(13, 23, 22, .085);
-  --line-strong: rgba(13, 23, 22, .15);
-  --accent: #16746b;
-  --accent-hover: #105952;
-  --accent-soft: rgba(22, 116, 107, .09);
-  --accent-text: #146b62;
-  --accent-bright: #16746b;
-  --header-bg: rgba(251, 252, 251, .75);
-  --header-scrolled: rgba(251, 252, 251, .95);
+  --line-strong: rgba(13, 23, 22, .14);
+  --accent: #146b62;
+  --accent-hover: #0e524b;
+  --accent-soft: rgba(20, 107, 98, .09);
+  --accent-text: #125e56;
+  --accent-bright: #146b62;
+  --header-bg: rgba(251, 252, 251, .82);
+  --header-scrolled: rgba(251, 252, 251, .96);
   --mobile-menu-bg: rgba(251, 252, 251, .98);
   --card-shadow: 0 16px 36px -12px rgba(13, 23, 22, .08);
-  --card-shadow-hover: 0 22px 42px -10px rgba(13, 23, 22, .12);
+  --card-shadow-hover: 0 24px 46px -10px rgba(13, 23, 22, .13);
   --input-bg: #ffffff;
   --input-placeholder: #829490;
-  --secondary-hover-bg: rgba(22, 116, 107, .05);
-  --grid-line: rgba(13, 23, 22, .03);
-  --focus-ring: #16746b;
+  --secondary-hover-bg: rgba(20, 107, 98, .05);
+  --grid-line: rgba(13, 23, 22, .035);
+  --focus-ring: #146b62;
   --grain-opacity: .018;
   --ease: cubic-bezier(.22, 1, .36, 1);
+
+  /* Luxury Hero Ambient Tokens (Light Mode) */
+  --hero-glow-1: rgba(20, 107, 98, .12);
+  --hero-glow-2: rgba(45, 178, 155, .10);
+  --hero-glow-3: rgba(224, 195, 138, .15);
+  --hero-grid-line: rgba(13, 23, 22, .045);
+  --hero-crosshair: rgba(13, 23, 22, .22);
+  --badge-bg: rgba(255, 255, 255, .88);
+  --badge-border: rgba(20, 107, 98, .22);
+  --badge-text: #0e3d36;
+  --badge-cat: #146b62;
+  --showcase-frame-bg: #ffffff;
+  --showcase-border: rgba(13, 23, 22, .12);
+  --showcase-shadow: 0 32px 75px -20px rgba(13, 23, 22, .15), 0 12px 30px -10px rgba(20, 107, 98, .12);
+  --metric-bg: rgba(255, 255, 255, .95);
+  --metric-border: rgba(13, 23, 22, .12);
 }
 
 [data-theme="dark"] {
   color-scheme: dark;
-  --canvas: #07100f;
-  --canvas-deep: #050b0a;
-  --surface: #0b1514;
-  --surface-2: #101b19;
-  --text: #f1f4f2;
-  --text-secondary: #a7b2af;
-  --text-muted: #7d8b87;
+  --canvas: #060d0c;
+  --canvas-deep: #040908;
+  --surface: #0a1413;
+  --surface-2: #0f1c1a;
+  --text: #f0f4f2;
+  --text-secondary: #a2b0ac;
+  --text-muted: #738480;
   --line: rgba(255, 255, 255, .085);
-  --line-strong: rgba(255, 255, 255, .15);
-  --accent: #20857b;
-  --accent-hover: #2b978c;
-  --accent-soft: rgba(32, 133, 123, .13);
-  --accent-text: #5baaa1;
-  --accent-bright: #69b8af;
-  --header-bg: rgba(7, 16, 15, .45);
-  --header-scrolled: rgba(7, 16, 15, .92);
-  --mobile-menu-bg: rgba(7, 16, 15, .98);
-  --card-shadow: 0 20px 48px -16px rgba(0, 0, 0, .5);
-  --card-shadow-hover: 0 24px 54px -12px rgba(0, 0, 0, .65);
+  --line-strong: rgba(255, 255, 255, .14);
+  --accent: #1e877c;
+  --accent-hover: #299c8f;
+  --accent-soft: rgba(30, 135, 124, .14);
+  --accent-text: #5db0a6;
+  --accent-bright: #6bc0b6;
+  --header-bg: rgba(6, 13, 12, .55);
+  --header-scrolled: rgba(6, 13, 12, .94);
+  --mobile-menu-bg: rgba(6, 13, 12, .98);
+  --card-shadow: 0 20px 48px -16px rgba(0, 0, 0, .55);
+  --card-shadow-hover: 0 26px 56px -12px rgba(0, 0, 0, .7);
   --input-bg: var(--canvas);
   --input-placeholder: #71807c;
-  --secondary-hover-bg: rgba(255, 255, 255, .035);
-  --grid-line: rgba(255, 255, 255, .025);
+  --secondary-hover-bg: rgba(255, 255, 255, .04);
+  --grid-line: rgba(255, 255, 255, .028);
   --focus-ring: #62b8af;
   --grain-opacity: .022;
+
+  /* Luxury Hero Ambient Tokens (Dark Mode) */
+  --hero-glow-1: rgba(30, 155, 138, .26);
+  --hero-glow-2: rgba(18, 128, 114, .24);
+  --hero-glow-3: rgba(217, 180, 107, .10);
+  --hero-grid-line: rgba(255, 255, 255, .045);
+  --hero-crosshair: rgba(93, 176, 166, .4);
+  --badge-bg: rgba(11, 22, 21, .8);
+  --badge-border: rgba(93, 176, 166, .26);
+  --badge-text: #e1edea;
+  --badge-cat: #6bc0b6;
+  --showcase-frame-bg: #0b1716;
+  --showcase-border: rgba(255, 255, 255, .12);
+  --showcase-shadow: 0 36px 90px -20px rgba(0, 0, 0, .85), 0 0 60px -10px rgba(30, 155, 138, .3);
+  --metric-bg: rgba(11, 23, 22, .92);
+  --metric-border: rgba(255, 255, 255, .14);
 }
 
 *{box-sizing:border-box}
@@ -111,12 +143,24 @@ section[id],article[id]{scroll-margin-top:88px}
 .section-heading-center .section-copy{margin-inline:auto}
 .section-label{display:inline-block;margin-bottom:12px;color:var(--accent-text);font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
 
-/* Hero Badge & Trust Pill */
-.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px 6px 10px;border-radius:999px;background:var(--surface);border:1px solid var(--line-strong);color:var(--text);font-size:13px;font-weight:550;letter-spacing:-.01em;box-shadow:0 2px 8px -2px rgba(0,0,0,.04);margin-bottom:24px;transition:border-color .2s,box-shadow .2s}
-.hero-badge:hover{border-color:var(--accent);box-shadow:0 4px 14px -3px rgba(22,116,107,.15)}
-.hero-badge-sparkle{color:var(--accent);display:flex;align-items:center}
-.hero-note{display:inline-flex;align-items:center;gap:10px;margin-top:28px;padding:8px 18px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line);color:var(--text-secondary);font-size:13.5px;font-weight:500}
-.hero-note span{width:7px;height:7px;border-radius:50%;background:#1db29c;box-shadow:0 0 10px rgba(29,178,156,.6);flex-shrink:0}
+/* Luxury Typography Accents */
+.hero-editorial-accent{font-family:var(--font-serif);font-style:italic;font-weight:500;letter-spacing:-.018em;background:linear-gradient(135deg,var(--text) 30%,var(--accent-bright) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:inline-block;padding-right:4px}
+[data-theme="dark"] .hero-editorial-accent{background:linear-gradient(135deg,#ffffff 40%,#6bc0b6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+
+/* Atelier Eyebrow Hallmark */
+.hero-badge{display:inline-flex;align-items:center;gap:10px;padding:7px 18px 7px 14px;border-radius:999px;background:var(--badge-bg);border:1px solid var(--badge-border);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);color:var(--badge-text);font-size:12.5px;font-weight:600;letter-spacing:.02em;box-shadow:0 4px 20px -4px rgba(0,0,0,.06);margin-bottom:26px;transition:border-color .25s var(--ease),box-shadow .25s var(--ease),transform .25s var(--ease)}
+.hero-badge:hover{border-color:var(--accent);transform:translateY(-1px);box-shadow:0 6px 24px -4px rgba(20,107,98,.2)}
+.hero-badge-beacon{position:relative;width:8px;height:8px;border-radius:50%;background:#14b8a6;box-shadow:0 0 10px #14b8a6;flex-shrink:0}
+.hero-badge-beacon::after{position:absolute;inset:-3px;border-radius:50%;border:1px solid #14b8a6;content:"";animation:beaconPulse 2.2s cubic-bezier(.24,0,.38,1) infinite}
+@keyframes beaconPulse{0%{transform:scale(.9);opacity:.8}70%{transform:scale(2.2);opacity:0}100%{transform:scale(2.2);opacity:0}}
+.hero-badge-category{text-transform:uppercase;font-size:10.5px;letter-spacing:.12em;color:var(--badge-cat);font-weight:750}
+.hero-badge-sep{opacity:.35;font-size:11px}
+.hero-badge-label{letter-spacing:-.01em;font-weight:550}
+
+/* Luxury Reassurance Guarantee */
+.hero-note{display:inline-flex;align-items:center;gap:11px;margin-top:30px;padding:8px 22px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line);color:var(--text-secondary);font-size:13.5px;font-weight:500;box-shadow:0 2px 10px -2px rgba(0,0,0,.03)}
+.hero-note-dot{width:7px;height:7px;border-radius:50%;background:#10b981;box-shadow:0 0 10px rgba(16,185,129,.7);flex-shrink:0}
+.hero-note-sep{opacity:.4}
 
 /* Theme Toggle Button */
 .nav-actions{display:flex;align-items:center;gap:12px;justify-self:end}
