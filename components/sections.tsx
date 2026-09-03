@@ -65,5 +65,5 @@ export function AgencyStandards() {
 }
 
 export function FinalCta() {
-  return <section className="final-cta-section"><div className="final-cta-mark" aria-hidden="true">V</div><div className="shell final-cta"><div className="final-cta-copy"><h2>Ready for a website that feels unmistakably yours?</h2><p>Tell us what you need the website to achieve. We will review the project and recommend the clearest path to design, build, and launch it well.</p></div><div className="final-cta-actions"><Link href="/contact" className="button">Get My Free Website Quote <ArrowRight size={18}/></Link><a href={`tel:${site.phoneHref}`} className="button-secondary"><Phone size={17}/>{site.phoneDisplay}</a></div></div></section>;
+  return <section className="final-cta-section"><div className="shell final-cta"><div className="final-cta-copy"><h2>Ready for a website that feels unmistakably yours?</h2><p>Tell us what you need the website to achieve. We will review the project and recommend the clearest path to design, build, and launch it well.</p></div><div className="final-cta-actions"><Link href="/contact" className="button">Get My Free Website Quote <ArrowRight size={18}/></Link><a href={`tel:${site.phoneHref}`} className="button-secondary"><Phone size={17}/>{site.phoneDisplay}</a></div></div></section>;
 }

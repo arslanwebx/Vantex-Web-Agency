@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Sparkles } from "lucide-react";
 
 export function Hero() {
   return (
@@ -8,6 +8,10 @@ export function Hero() {
 
       <div className="shell hero-centered">
         <div className="hero-copy">
+          <div className="hero-badge">
+            <span className="hero-badge-sparkle" aria-hidden="true"><Sparkles size={14} /></span>
+            <span>Custom Web Design & Development Studio</span>
+          </div>
           <h1 className="hero-mega-title">
             Turn More Website Visitors Into Real Paying Customers
           </h1>
@@ -19,13 +23,13 @@ export function Hero() {
             <Link href="/contact/#project-brief" className="button hero-primary">
               Get My Free Website Quote <ArrowRight size={18} aria-hidden="true" />
             </Link>
-            <Link href="/portfolio" className="hero-secondary">
+            <Link href="/portfolio" className="button-secondary hero-secondary">
               View Our Work <ArrowUpRight size={17} aria-hidden="true" />
             </Link>
           </div>
           <p className="hero-note">
             <span aria-hidden="true" />
-            No templates. No handoffs. Built around your business.
+            No templates · No handoffs · Built around your business
           </p>
         </div>
       </div>

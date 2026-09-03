@@ -23,11 +23,11 @@ function subscribe(callback: () => void) {
 }
 
 function getSnapshot(): "light" | "dark" {
-  return document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark";
+  return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
 }
 
 function getServerSnapshot(): "light" | "dark" {
-  return "dark";
+  return "light";
 }
 
 export function ThemeToggle({ className = "" }: { className?: string }) {
