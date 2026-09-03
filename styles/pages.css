@@ -38,3 +38,38 @@
 
 /* Legal and 404 */
 .legal-copy{max-width:900px}.legal-copy h1{font-size:clamp(3.4rem,7vw,6.8rem);font-weight:500;line-height:.92;letter-spacing:-.068em}.legal-copy h2{margin-top:45px;border-top:1px solid var(--line);padding-top:24px;font-size:22px;font-weight:570;letter-spacing:-.025em}.legal-copy p{margin-top:14px;color:var(--text-secondary);line-height:1.8}.legal-copy a{color:#64b4ab;border-bottom:1px solid rgba(100,180,171,.35)}.legal-copy .legal-date{color:var(--text-muted);font-size:13px}
+
+/* Light mode interior page styling */
+[data-theme="light"] .services-standard-grid i,
+[data-theme="light"] .service-detail-number,
+[data-theme="light"] .service-includes svg,
+[data-theme="light"] .service-fit>span,
+[data-theme="light"] .service-outcome>span,
+[data-theme="light"] .pricing-hero-note svg,
+[data-theme="light"] .about-operations>li>span,
+[data-theme="light"] .about-belief h2 em,
+[data-theme="light"] .about-principles-list>li>span,
+[data-theme="light"] .about-fit-grid svg,
+[data-theme="light"] .contact-direct>a>svg,
+[data-theme="light"] .contact-direct>p svg,
+[data-theme="light"] .contact-next-layout li>span{
+  color:var(--accent-text);
+}
+[data-theme="light"] .portfolio-work-jump:hover,
+[data-theme="light"] .contact-hero-jump:hover{
+  border-color:var(--accent);
+  color:var(--accent-bright);
+}
+[data-theme="light"] .portfolio-list-page .portfolio-media{
+  box-shadow:var(--card-shadow);
+  border-color:var(--line-strong);
+}
+[data-theme="light"] .portfolio-list-page .portfolio-media:hover{
+  border-color:var(--accent);
+  box-shadow:var(--card-shadow-hover);
+}
+[data-theme="light"] .legal-copy a{
+  color:var(--accent-text);
+  border-bottom-color:var(--accent-soft);
+}
+

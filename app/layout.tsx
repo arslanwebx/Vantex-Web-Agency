@@ -24,7 +24,14 @@ export const viewport: Viewport = { width: "device-width", initialScale: 1, them
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t);}else if(window.matchMedia("(prefers-color-scheme: light)").matches){document.documentElement.setAttribute("data-theme","light");}else{document.documentElement.setAttribute("data-theme","dark");}}catch(e){}})();`,
+          }}
+        />
+      </head>
       <body className={`${instrument.variable} ${newsreader.variable}`}><a className="skip-link" href="#top">Skip to main content</a><ScrollManager/><MotionSystem/><JsonLd data={siteWideSchema}/>{children}<Script src="https://www.googletagmanager.com/gtag/js?id=G-GYGFRYE93M" strategy="afterInteractive"/><Script id="google-analytics" strategy="afterInteractive">{`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());

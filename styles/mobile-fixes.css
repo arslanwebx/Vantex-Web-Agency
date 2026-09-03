@@ -35,6 +35,10 @@
     font-size:11px;
   }
 
+  [data-theme="light"] .trust-item span{
+    color:var(--accent-text);
+  }
+
   .hero-note{
     display:inline-flex;
     width:auto;
