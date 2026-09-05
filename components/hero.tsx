@@ -58,7 +58,7 @@ export function Hero() {
               <ArrowRight size={18} aria-hidden="true" />
             </Link>
             <Link href="/portfolio" className="button-secondary hero-secondary">
-              <span>View Selected Work</span>
+              <span>View Our Work</span>
               <ArrowUpRight size={17} aria-hidden="true" />
             </Link>
           </div>
