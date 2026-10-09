@@ -17,14 +17,14 @@
   .relationship-layout,.faq-layout,.contact-page-form-section>.shell,.contact-next-layout{grid-template-columns:1fr 1.2fr;gap:55px}.final-cta{grid-template-columns:1fr}.final-cta-actions{width:min(100%,640px);flex-direction:row;flex-wrap:nowrap}.final-cta-actions>*{flex:1 1 0}
   .page-hero-grid{grid-template-columns:repeat(8,minmax(0,1fr))}.page-hero-grid>h1{grid-column:1/6}.page-hero-grid>div{grid-column:6/9}
   .service-detail{grid-template-columns:1fr 1.15fr;gap:65px}.services-closing-layout,.portfolio-cta-layout,.about-closing-layout{grid-template-columns:1fr}.services-closing-layout>div:last-child,.portfolio-cta-actions{width:min(100%,440px);flex-direction:row;flex-wrap:wrap}.services-closing-layout>div:last-child>*,.portfolio-cta-actions>*{flex:1 1 190px}.about-closing .button{justify-self:start}
-  .portfolio-page-compact,.portfolio-page-heading{grid-template-columns:5fr 3fr}.about-hero-layout,.contact-hero-layout{grid-template-columns:1.1fr .9fr;gap:60px}.about-belief-layout{grid-template-columns:1fr 1fr;gap:60px}
+  .portfolio-page-compact{grid-template-columns:5fr 3fr}.about-hero-layout,.contact-hero-layout{grid-template-columns:1.1fr .9fr;gap:60px}.about-belief-layout{grid-template-columns:1fr 1fr;gap:60px}
 }
 
 @media(max-width:899px){
   .page-hero-grid{display:block}.page-hero-grid>div{margin-top:32px}
   .service-detail{grid-template-columns:1fr;gap:44px}.service-includes ul{grid-template-columns:1fr 1fr}
   .relationship-layout,.faq-layout,.contact-page-form-section>.shell,.contact-next-layout{grid-template-columns:1fr;gap:46px}
-  .portfolio-page-compact,.portfolio-page-heading,.portfolio-cta-layout{grid-template-columns:1fr}.portfolio-page-compact>div:last-child{margin-top:26px}.portfolio-page-heading{gap:18px}.portfolio-list-page .portfolio-copy{display:flex;flex-direction:column;gap:20px}.portfolio-list-page .portfolio-highlights{margin-top:12px;border-top:1px solid var(--line);padding-top:14px}.portfolio-list-page .portfolio-link{margin-top:14px}
+  .portfolio-page-compact,.portfolio-cta-layout{grid-template-columns:1fr}.portfolio-page-compact>div:last-child{margin-top:26px}.portfolio-list-page .portfolio-copy{display:flex;flex-direction:column;gap:20px}.portfolio-list-page .portfolio-highlights{margin-top:12px;border-top:1px solid var(--line);padding-top:14px}.portfolio-list-page .portfolio-link{margin-top:14px}
   .about-hero-layout,.contact-hero-layout,.about-belief-layout{grid-template-columns:1fr;gap:48px}.about-operations,.contact-direct{margin-top:2px}.about-section-heading,.about-fit-heading{grid-template-columns:1fr;gap:20px}
   .footer-main{grid-template-columns:repeat(3,minmax(0,1fr));gap:38px}.footer-brand{grid-column:1/-1}.footer-connect{grid-column:auto}
 }

@@ -6,12 +6,12 @@ export function PortfolioCard({
   project,
   featured = false,
   number,
-  detailsFirst = false,
+  headingFirst = false,
 }: {
   project: PortfolioProject;
   featured?: boolean;
   number?: number;
-  detailsFirst?: boolean;
+  headingFirst?: boolean;
 }) {
   const media = (
     <a
@@ -41,7 +41,7 @@ export function PortfolioCard({
           <span>{project.type}</span>
           <span>{project.domain}</span>
         </div>
-        <h3>{number === undefined ? project.name : `${number}. ${project.name}`}</h3>
+        {!headingFirst && <h3>{number === undefined ? project.name : `${number}. ${project.name}`}</h3>}
         <p>{project.summary}</p>
       </div>
       <div className="portfolio-copy-side">
@@ -65,9 +65,13 @@ export function PortfolioCard({
 
   return (
     <article className={`portfolio-card ${featured ? "portfolio-card-featured" : ""}`}>
-      {detailsFirst && copy}
+      {headingFirst && (
+        <h3 className="portfolio-card-heading">
+          {number === undefined ? project.name : `${number}. ${project.name}`}
+        </h3>
+      )}
       {media}
-      {!detailsFirst && copy}
+      {copy}
     </article>
   );
 }
