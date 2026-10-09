@@ -2,53 +2,72 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import type { PortfolioProject } from "@/lib/portfolio";
 
-export function PortfolioCard({ project, featured = false }: { project: PortfolioProject; featured?: boolean }) {
+export function PortfolioCard({
+  project,
+  featured = false,
+  number,
+  detailsFirst = false,
+}: {
+  project: PortfolioProject;
+  featured?: boolean;
+  number?: number;
+  detailsFirst?: boolean;
+}) {
+  const media = (
+    <a
+      className="portfolio-media"
+      href={project.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`View ${project.name} live website (opens in a new tab)`}
+    >
+      <Image
+        src={project.image}
+        width={1200}
+        height={750}
+        loading={featured ? "eager" : "lazy"}
+        fetchPriority={featured ? "high" : "auto"}
+        decoding="async"
+        sizes="(min-width: 1280px) 1150px, (min-width: 768px) 92vw, 100vw"
+        alt={project.alt}
+      />
+    </a>
+  );
+
+  const copy = (
+    <div className="portfolio-copy">
+      <div className="portfolio-copy-main">
+        <div className="portfolio-meta">
+          <span>{project.type}</span>
+          <span>{project.domain}</span>
+        </div>
+        <h3>{number === undefined ? project.name : `${number}. ${project.name}`}</h3>
+        <p>{project.summary}</p>
+      </div>
+      <div className="portfolio-copy-side">
+        <ul className="portfolio-highlights">
+          {project.highlights.map((highlight) => (
+            <li key={highlight}>{highlight}</li>
+          ))}
+        </ul>
+        <a
+          className="portfolio-link"
+          href={project.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`View ${project.name} live website (opens in a new tab)`}
+        >
+          View live website <ArrowUpRight size={17} />
+        </a>
+      </div>
+    </div>
+  );
+
   return (
     <article className={`portfolio-card ${featured ? "portfolio-card-featured" : ""}`}>
-      <a
-        className="portfolio-media"
-        href={project.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={`View ${project.name} live website (opens in a new tab)`}
-      >
-        <Image
-          src={project.image}
-          width={1200}
-          height={750}
-          loading={featured ? "eager" : "lazy"}
-          fetchPriority={featured ? "high" : "auto"}
-          decoding="async"
-          sizes="(min-width: 1280px) 1150px, (min-width: 768px) 92vw, 100vw"
-          alt={project.alt}
-        />
-      </a>
-      <div className="portfolio-copy">
-        <div className="portfolio-copy-main">
-          <div className="portfolio-meta">
-            <span>{project.type}</span>
-            <span>{project.domain}</span>
-          </div>
-          <h3>{project.name}</h3>
-          <p>{project.summary}</p>
-        </div>
-        <div className="portfolio-copy-side">
-          <ul className="portfolio-highlights">
-            {project.highlights.map((highlight) => (
-              <li key={highlight}>{highlight}</li>
-            ))}
-          </ul>
-          <a
-            className="portfolio-link"
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`View ${project.name} live website (opens in a new tab)`}
-          >
-            View live website <ArrowUpRight size={17} />
-          </a>
-        </div>
-      </div>
+      {detailsFirst && copy}
+      {media}
+      {!detailsFirst && copy}
     </article>
   );
 }
