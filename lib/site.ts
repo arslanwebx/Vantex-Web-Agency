@@ -6,4 +6,5 @@ export const site = {
   email: "hello@vantexwebstudio.com",
   phoneDisplay: "+923077222866",
   phoneHref: "+923077222866",
+  whatsappHref: "https://wa.me/923077222866",
 } as const;

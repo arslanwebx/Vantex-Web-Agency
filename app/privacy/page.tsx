@@ -20,7 +20,7 @@ export default function PrivacyPage() {
         <h2>Information we collect</h2><p>When you submit the contact form, we receive the information you provide, such as your name, business details, contact information, budget range, and project description.</p>
         <h2>How we use information</h2><p>We use submitted information to respond to your inquiry, evaluate project fit, prepare recommendations or proposals, and communicate about requested services. We do not sell your personal information.</p>
         <h2>Service providers</h2><p>Form submissions may be processed by our hosting and form-delivery providers. These providers process information only as needed to deliver their services.</p>
-        <h2>Retention and choices</h2><p>We retain inquiry details only as long as reasonably needed for business and legal purposes. You can request access, correction, or deletion by emailing <a href={`mailto:${site.email}`}>{site.email}</a> or calling <a href={`tel:${site.phoneHref}`}>{site.phoneDisplay}</a>.</p>
+        <h2>Retention and choices</h2><p>We retain inquiry details only as long as reasonably needed for business and legal purposes. You can request access, correction, or deletion by emailing <a href={`mailto:${site.email}`}>{site.email}</a> or messaging us on WhatsApp at <a href={site.whatsappHref}>{site.phoneDisplay}</a>.</p>
         <h2>Updates</h2><p>We may update this policy as our services change. The date above shows the latest revision.</p>
       </article>
       <JsonLd data={breadcrumbSchema("Privacy Policy", "/privacy/")}/>
